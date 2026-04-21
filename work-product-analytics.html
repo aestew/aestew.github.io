@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Work — Amy Steward</title>
-<meta name="description" content="Machine learning capabilities — feature engineering, model selection, RAG systems, end-to-end products.">
+<title>Product Analytics — Amy Steward</title>
+<meta name="description" content="Product analytics capabilities — KPI frameworks, forecasting, A/B testing, revenue strategy.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233a0a20'/%3E%3Cstop offset='30%25' stop-color='%234e1838'/%3E%3Cstop offset='50%25' stop-color='%235a2248'/%3E%3Cstop offset='75%25' stop-color='%232e3a5a'/%3E%3Cstop offset='100%25' stop-color='%230a2a3a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='18' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-family='Oswald, sans-serif' font-weight='200' font-size='52' fill='%23FFF4EC' text-anchor='middle' letter-spacing='1'%3EAS%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -588,121 +588,55 @@
 <!-- ============ DISCIPLINE SWITCHER ============ -->
 <section class="discipline-nav">
   <div class="discipline-tabs">
-    <a href="work.html" class="disc-tab active">Machine Learning</a>
-    <a href="work-product-analytics.html" class="disc-tab tab-pa">Product Analytics</a>
+    <a href="work.html" class="disc-tab">Machine Learning</a>
+    <a href="work-product-analytics.html" class="disc-tab tab-pa active">Product Analytics</a>
     <a href="work-full-stack.html" class="disc-tab tab-fs">Full Stack Dev</a>
   </div>
 </section>
 
-<!-- ============ WHAT I DO / JUMP NAV ============ ->
+<!-- ============ WHAT I DO / JUMP NAV ============ -->
 <section class="jump-nav-section">
-  <div class="jump-label">What I do</div>
-  <div class="jump-sub">Click a skill to learn more.</div>
-  <div class="jump-buttons">
-    <a href="#feature-engineering" class="jump-btn">Feature Engineering</a>
-    <a href="#model-selection" class="jump-btn">Model Selection</a>
-    <a href="#rag-systems" class="jump-btn">RAG Systems</a>
-    <a href="#end-to-end" class="jump-btn">End-to-End Products</a>
-  </div>
-</section>
-
-<!-- ============ RESULTS ============ -->
-<section class="results">
-  <div class="results-inner">
-    <div class="results-label">Results</div>
-    <div class="results-sub">Selected projects. Code on GitHub, writeups on Medium.</div>
-
-    <div class="project-list">
-
-      <div class="project-row">
-        <div class="project-info">
-          <div class="project-name">ClimateFEAT</div>
-          <p class="project-desc">California peak electricity demand under CMIP6 climate scenarios. Custom multi-stream PyTorch transformer over URMA + LOCA2 data, shipped as the Wattson Streamlit app. Capstone for UC Berkeley MIDS, built for the California Energy Commission.</p>
-          <div class="project-tags">
-            <span>PyTorch</span>
-            <span>Transformers</span>
-            <span>CMIP6</span>
-            <span>RAG</span>
-            <span>Streamlit</span>
-          </div>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/aestew/california_peak_demand_cmip6" class="proj-link" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://medium.com/@aestew" class="proj-link medium" target="_blank" rel="noopener">Medium</a>
-        </div>
-      </div>
-
-      <div class="project-row">
-        <div class="project-info">
-          <div class="project-name">Corn Yield Forecasting</div>
-          <p class="project-desc">Multi-head attention model for county-level U.S. corn yield prediction. Combined weather, soil, and satellite time-series features; ablated attention heads against a gradient-boosted baseline.</p>
-          <div class="project-tags">
-            <span>PyTorch</span>
-            <span>Multi-head attention</span>
-            <span>Time series</span>
-            <span>Remote sensing</span>
-          </div>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/aestew" class="proj-link" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://medium.com/@aestew" class="proj-link medium" target="_blank" rel="noopener">Medium</a>
-        </div>
-      </div>
-
-      <div class="project-row">
-        <div class="project-info">
-          <div class="project-name">Flight Delay Prediction</div>
-          <p class="project-desc">FT-Transformer for U.S. flight delay classification on a 200M+ row dataset. Distributed feature engineering in PySpark, tabular transformer training, and an OOD evaluation split by carrier and season.</p>
-          <div class="project-tags">
-            <span>FT-Transformer</span>
-            <span>PySpark</span>
-            <span>Databricks</span>
-            <span>200M+ rows</span>
-          </div>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/aestew" class="proj-link" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://medium.com/@aestew" class="proj-link medium" target="_blank" rel="noopener">Medium</a>
-        </div>
-      </div>
-
-    </div>
+  <div class="jump-label coral">Product Analytics</div>
+  <div class="jump-sub">What I do. Click a skill to learn more.</div>
+  <div class="jump-buttons pa-buttons">
+    <a href="#pa-kpi" class="jump-btn">KPI Frameworks</a>
+    <a href="#pa-forecasting" class="jump-btn">Forecasting</a>
+    <a href="#pa-testing" class="jump-btn">A/B Testing</a>
+    <a href="#pa-strategy" class="jump-btn">Revenue Strategy</a>
   </div>
 </section>
 
 <!-- ============ CAPABILITIES ============ -->
 <main class="capabilities">
 
-  <article class="capability" id="feature-engineering">
+  <article class="capability" id="pa-kpi">
     <div class="cap-number">01</div>
     <div class="cap-body">
-      <h2 class="cap-title">Feature<br>Engineering</h2>
-      <p class="cap-blurb">Most of the lift in a production ML system comes before the model sees a single batch. I build features that encode <em>domain knowledge</em> — population-weighted spatial aggregation, rolling temporal windows, transforms that keep features extrapolable (like the sqrt(BEV) move that fixed EV tail behavior in ClimateFEAT). Feature design is usually where the OOD performance gap gets opened.</p>
+      <h2 class="cap-title">KPI<br>Frameworks</h2>
+      <p class="cap-blurb">At AppFolio I built the payments KPI framework <em>from scratch</em> — translating ambiguous business objectives into well-defined metrics governing revenue, growth, risk, and operational performance. The framework scaled from a 3-person team to 70+ team members without metric drift. At Ontra, I developed Critical Path KPIs that I presented directly to C-level leadership, product, and sales to pinpoint customer-lifecycle opportunities.</p>
 
       <div class="cap-meta">
         <div>
-          <div class="meta-label">Tools &amp; techniques</div>
+          <div class="meta-label coral">Approach</div>
           <div class="tool-list">
-            <span>PySpark</span>
-            <span>xarray</span>
-            <span>KDTree</span>
-            <span>Lambert Conformal</span>
-            <span>Rolling windows</span>
-            <span>Target encoding</span>
-            <span>Monotonic transforms</span>
-            <span>Pop-weighted aggregation</span>
+            <span>0→1 frameworks</span>
+            <span>Critical path metrics</span>
+            <span>Temporal correctness</span>
+            <span>Metric reproducibility</span>
+            <span>C-level reporting</span>
+            <span>Cross-functional alignment</span>
           </div>
         </div>
         <div>
-          <div class="meta-label coral">Receipts</div>
+          <div class="meta-label">Receipts</div>
           <div class="metrics">
             <div class="metric">
-              <div class="metric-num">200M+ rows</div>
-              <div class="metric-desc">Flight-delay FT-Transformer feature pipeline</div>
+              <div class="metric-num">3 → 70 team members</div>
+              <div class="metric-desc">KPI systems held stable as AppFolio payments org scaled 23×</div>
             </div>
             <div class="metric">
-              <div class="metric-num">5 streams</div>
-              <div class="metric-desc">Weather, rolling time, geo, infra, heat-wave — cross-attention over them</div>
+              <div class="metric-num">Vibes → forecast</div>
+              <div class="metric-desc">Transformed payments org from qualitative to data-driven decisions</div>
             </div>
           </div>
         </div>
@@ -710,36 +644,34 @@
     </div>
   </article>
 
-  <article class="capability" id="model-selection">
+  <article class="capability" id="pa-forecasting">
     <div class="cap-number">02</div>
     <div class="cap-body">
-      <h2 class="cap-title">Model<br>Selection</h2>
-      <p class="cap-blurb">I pick the model that wins on the <em>test distribution I actually care about</em>, not the one that wins on a random holdout. That means time-aware validation, OOD test splits, and always running a boring baseline (LightGBM, usually) so I know what a fancy architecture is actually buying me. Sometimes the baseline wins. Sometimes a custom transformer with cross-stream attention wins. The point is to find out honestly.</p>
+      <h2 class="cap-title">Forecasting</h2>
+      <p class="cap-blurb">I build forecasting and scenario-analysis models that inform real revenue, pricing, and risk decisions. At Ontra, a product-usage throughput forecasting model was <em>productionized into operational workflows</em>, driving company revenue. At AppFolio, I built forecasting models that evaluated demand, revenue, and risk under changing macroeconomic conditions — the kind of work that turned into board-level narrative.</p>
 
       <div class="cap-meta">
         <div>
-          <div class="meta-label">Architectures</div>
+          <div class="meta-label coral">Techniques</div>
           <div class="tool-list">
-            <span>PyTorch</span>
-            <span>Custom transformers</span>
-            <span>FT-Transformer</span>
-            <span>Cross-stream attention</span>
-            <span>LightGBM</span>
-            <span>XGBoost</span>
-            <span>Dendritic (Perforated AI)</span>
-            <span>SiLU</span>
+            <span>Revenue forecasting</span>
+            <span>Throughput models</span>
+            <span>Scenario analysis</span>
+            <span>Demand forecasting</span>
+            <span>Risk modeling</span>
+            <span>Time-aware validation</span>
           </div>
         </div>
         <div>
-          <div class="meta-label teal">Receipts</div>
+          <div class="meta-label">Receipts</div>
           <div class="metrics">
             <div class="metric">
-              <div class="metric-num">139 MWh</div>
-              <div class="metric-desc">Val RMSE — transformer, 12.0% pop-weighted</div>
+              <div class="metric-num">Productionized</div>
+              <div class="metric-desc">Throughput forecast embedded in Ontra's operational workflows</div>
             </div>
             <div class="metric">
-              <div class="metric-num">Beat baseline OOD</div>
-              <div class="metric-desc">Transformer 172 MWh test vs LightGBM 199 MWh on held-out climate regimes</div>
+              <div class="metric-num">Board-ready</div>
+              <div class="metric-desc">Macro-scenario revenue models for AppFolio payments</div>
             </div>
           </div>
         </div>
@@ -747,35 +679,34 @@
     </div>
   </article>
 
-  <article class="capability" id="rag-systems">
+  <article class="capability" id="pa-testing">
     <div class="cap-number">03</div>
     <div class="cap-body">
-      <h2 class="cap-title">RAG<br>Systems</h2>
-      <p class="cap-blurb">I build retrieval pipelines that stay grounded in source material, not model priors. The Wattson RAG system is the current production example: 20 curated CEC and methodology documents, chunked into 438 embeddings via Voyage AI's <em>voyage-3.5-lite</em>, stored in ChromaDB, and composed with Claude for generation. The hard parts are never the embedding call — they're corpus curation, chunking strategy, and keeping the retrieved context <em>relevant enough</em> that generation doesn't drift.</p>
+      <h2 class="cap-title">A/B<br>Testing</h2>
+      <p class="cap-blurb">I design A/B tests that answer the <em>business</em> question, not just the statistical one. At AppFolio, I implemented A/B testing for pricing changes that drove significant incremental revenue through customer-outcome optimization. Getting pricing tests right requires thinking carefully about segment effects, power analysis, and how short-term lift trades against long-term retention — not just running the test.</p>
 
       <div class="cap-meta">
         <div>
-          <div class="meta-label">Stack</div>
+          <div class="meta-label coral">Focus</div>
           <div class="tool-list">
-            <span>Voyage AI</span>
-            <span>ChromaDB</span>
-            <span>Claude API</span>
-            <span>LangChain</span>
-            <span>Semantic chunking</span>
-            <span>Hybrid retrieval</span>
-            <span>Reranking</span>
+            <span>Pricing experiments</span>
+            <span>Customer outcomes</span>
+            <span>Segment analysis</span>
+            <span>Power analysis</span>
+            <span>Incremental revenue</span>
+            <span>Long-term effects</span>
           </div>
         </div>
         <div>
-          <div class="meta-label coral">Receipts</div>
+          <div class="meta-label">Receipts</div>
           <div class="metrics">
             <div class="metric">
-              <div class="metric-num">438 chunks</div>
-              <div class="metric-desc">From 20 curated source documents in the Wattson corpus</div>
+              <div class="metric-num">Incremental revenue</div>
+              <div class="metric-desc">Pricing A/B tests drove measurable lift at AppFolio</div>
             </div>
             <div class="metric">
-              <div class="metric-num">Grounded Q&amp;A</div>
-              <div class="metric-desc">Deployed to Streamlit with citation-aware generation</div>
+              <div class="metric-num">Customer-first</div>
+              <div class="metric-desc">Test design optimized for outcome quality, not just statistical significance</div>
             </div>
           </div>
         </div>
@@ -783,36 +714,34 @@
     </div>
   </article>
 
-  <article class="capability" id="end-to-end">
+  <article class="capability" id="pa-strategy">
     <div class="cap-number">04</div>
     <div class="cap-body">
-      <h2 class="cap-title">End-to-End<br>Products</h2>
-      <p class="cap-blurb">A model alone is not a product. I build the whole thing: ingestion pipelines, training infrastructure, batch inference, the web app, and the monitoring to know when it's drifting. Wattson is the clearest recent example — URMA/LOCA2 climate data at 2.5km resolution, through a custom PyTorch transformer, through CMIP6 inference across <em>12 scenario × SSP combinations</em>, out to a Streamlit app with choropleth maps and a RAG chat interface. All of it shipped and demoed to the California Energy Commission.</p>
+      <h2 class="cap-title">Revenue<br>Strategy</h2>
+      <p class="cap-blurb">I translate analytics into decisions that move the P&amp;L. At AppFolio, KPI-driven insights, forecasting, and pricing analysis informed product, compliance, and go-to-market decisions — delivering <em>double-digit millions</em> in incremental revenue. The work isn't just generating numbers; it's the strategic work of figuring out which opportunities actually move the business and building the partnerships across product, sales, and engineering to ship them.</p>
 
       <div class="cap-meta">
         <div>
-          <div class="meta-label">Production stack</div>
+          <div class="meta-label coral">Partnerships</div>
           <div class="tool-list">
-            <span>Databricks</span>
-            <span>Kubernetes</span>
-            <span>Docker</span>
-            <span>FastAPI</span>
-            <span>Streamlit</span>
-            <span>GitHub Actions</span>
-            <span>Cloudflare</span>
-            <span>GRIB2 / NetCDF</span>
+            <span>Product strategy</span>
+            <span>Go-to-market</span>
+            <span>Pricing strategy</span>
+            <span>Compliance analytics</span>
+            <span>Sales enablement</span>
+            <span>C-suite reporting</span>
           </div>
         </div>
         <div>
-          <div class="meta-label teal">Receipts</div>
+          <div class="meta-label">Receipts</div>
           <div class="metrics">
             <div class="metric">
-              <div class="metric-num">12 inference runs</div>
-              <div class="metric-desc">6 infrastructure scenarios × 2 SSP pathways, end-to-end automated</div>
+              <div class="metric-num">$10M+ incremental</div>
+              <div class="metric-desc">Double-digit millions in revenue driven by KPI-led strategy at AppFolio</div>
             </div>
             <div class="metric">
-              <div class="metric-num">Shipped to CEC</div>
-              <div class="metric-desc">Live Streamlit app with choropleth, RAG chat, forecast charts</div>
+              <div class="metric-num">3M &amp; Allergan</div>
+              <div class="metric-desc">Earlier career: large-scale cost savings in regulated manufacturing environments</div>
             </div>
           </div>
         </div>
@@ -821,8 +750,6 @@
   </article>
 
 </main>
-
-
 
 <!-- ============ BACK LINK ============ -->
 <section class="back-link-section">
