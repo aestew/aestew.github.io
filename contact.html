@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Amy Steward</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Fraunces:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@300..600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --midnight: #020814;
+    --cream: #FFF4EC;
+    --cream-dim: rgba(255, 220, 210, 0.75);
+    --cream-faint: rgba(255, 220, 210, 0.45);
+    --accent: #B566D9;
+    --display: 'Oswald', sans-serif;
+    --editorial: 'Fraunces', serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--midnight);
+    color: var(--cream);
+    font-family: var(--editorial);
+    font-weight: 300;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* sparkles — same field as landing page */
+  .sparkle-field {
+    position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: 1;
+    mix-blend-mode: screen;
+  }
+  .sparkle {
+    position: absolute; background: #E8D8E8; border-radius: 50%;
+    animation: twinkle 4s ease-in-out infinite;
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.15; transform: scale(0.7); }
+    50% { opacity: 0.9; transform: scale(1.2); }
+  }
+
+  /* top bar */
+  .topbar {
+    position: relative; z-index: 5;
+    padding: 28px 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand {
+    font-family: var(--display);
+    font-weight: 200;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  .top-nav {
+    display: flex;
+    gap: 28px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+  .top-nav a {
+    color: var(--cream-dim);
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 4px;
+  }
+  .top-nav a.active { color: var(--cream); }
+  .top-nav a.active::after {
+    content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px;
+    background: var(--accent);
+  }
+  .top-nav a:hover { color: var(--cream); }
+
+  /* page content */
+  .page {
+    flex: 1;
+    padding: 80px 36px 120px;
+    position: relative; z-index: 2;
+  }
+  .page-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .page-title {
+    font-family: var(--display);
+    font-weight: 200;
+    font-size: clamp(48px, 8vw, 96px);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 0.95;
+    margin-bottom: 40px;
+  }
+  .page-body {
+    font-family: var(--editorial);
+    font-weight: 300;
+    font-size: 17px;
+    color: var(--cream-dim);
+    line-height: 1.7;
+    max-width: 640px;
+  }
+  .coming-soon {
+    margin-top: 48px;
+    padding: 32px;
+    background: rgba(2, 8, 20, 0.85);
+    border: 0.5px solid rgba(255, 220, 210, 0.15);
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+    max-width: 640px;
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 48px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+    transition: gap 0.3s ease, color 0.3s ease;
+  }
+  .back-link:hover { gap: 16px; color: var(--cream); }
+
+  /* footer */
+  .footer {
+    position: relative; z-index: 2;
+    padding: 40px 36px;
+    background: rgba(2, 5, 16, 0.9);
+    border-top: 0.5px solid rgba(255, 220, 210, 0.1);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cream-faint);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  @media (max-width: 600px) {
+    .topbar { flex-direction: column; gap: 16px; align-items: flex-start; }
+    .top-nav { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sparkle-field" id="sparkle-field" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a href="index.html" class="brand">Amy Steward</a>
+  <nav class="top-nav">
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="page-inner">
+    <div class="eyebrow">Contact</div>
+    <h1 class="page-title">Get in<br>touch</h1>
+    <p class="page-body">Open to climate-ML research roles, product analytics consulting, and interesting applied ML problems. Based in Santa Barbara, CA.</p>
+    <div class="coming-soon"><a href="mailto:amy.steward0622@gmail.com" style="color: var(--cream); text-decoration: none;">amy.steward0622@gmail.com</a></div>
+    <a href="index.html" class="back-link">← Back to home</a>
+  </div>
+</main>
+
+<footer class="footer">
+  <span>© 2026 Amy Steward · Santa Barbara, CA</span>
+  <span><a href="mailto:amy.steward0622@gmail.com">Email</a> · <a href="https://github.com/aestew">GitHub</a> · <a href="https://linkedin.com/in/amyesteward/">LinkedIn</a></span>
+</footer>
+
+<script>
+  (function() {
+    const field = document.getElementById('sparkle-field');
+    if (!field) return;
+    const COUNT = 80;
+    const frag = document.createDocumentFragment();
+    for (let i = 0; i < COUNT; i++) {
+      const s = document.createElement('span');
+      s.className = 'sparkle';
+      const size = 1 + Math.random() * 2.5;
+      s.style.width = size + 'px';
+      s.style.height = size + 'px';
+      s.style.top = Math.random() * 100 + '%';
+      s.style.left = Math.random() * 100 + '%';
+      s.style.animationDelay = (Math.random() * 4) + 's';
+      s.style.animationDuration = (3 + Math.random() * 4) + 's';
+      const hue = Math.random();
+      if (hue < 0.3) s.style.background = '#D8C4E0';
+      else if (hue < 0.6) s.style.background = '#C8D8E8';
+      else s.style.background = '#EAE0E8';
+      frag.appendChild(s);
+    }
+    field.appendChild(frag);
+  })();
+</script>
+
+</body>
+</html>
