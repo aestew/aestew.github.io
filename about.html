@@ -14,6 +14,7 @@
     --cream-dim: rgba(255, 220, 210, 0.75);
     --cream-faint: rgba(255, 220, 210, 0.45);
     --accent: #B566D9;
+    --coral: #f2744d;
     --display: 'Oswald', sans-serif;
     --editorial: 'Fraunces', serif;
     --mono: 'JetBrains Mono', ui-monospace, monospace;
@@ -33,7 +34,7 @@
   }
   a { color: inherit; text-decoration: none; }
 
-  /* sparkles — same field as landing page */
+  /* sparkles */
   .sparkle-field {
     position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: 1;
     mix-blend-mode: screen;
@@ -86,7 +87,7 @@
   /* page content */
   .page {
     flex: 1;
-    padding: 80px 36px 120px;
+    padding: 80px 36px 100px;
     position: relative; z-index: 2;
   }
   .page-inner {
@@ -108,33 +109,100 @@
     text-transform: uppercase;
     letter-spacing: -0.01em;
     line-height: 0.95;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
   }
   .page-body {
     font-family: var(--editorial);
     font-weight: 300;
-    font-size: 17px;
+    font-size: 19px;
     color: var(--cream-dim);
-    line-height: 1.7;
-    max-width: 640px;
+    line-height: 1.75;
+    max-width: 680px;
   }
-  .coming-soon {
-    margin-top: 48px;
-    padding: 32px;
-    background: rgba(2, 8, 20, 0.85);
+  .page-body em {
+    font-style: italic;
+    color: var(--cream);
+  }
+
+  /* photo */
+  .photo-wrap {
+    margin: 64px 0 48px;
+    max-width: 680px;
+  }
+  .photo-frame {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: rgba(2, 8, 20, 0.6);
     border: 0.5px solid rgba(255, 220, 210, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .photo-placeholder {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--cream-faint);
+  }
+  .photo-caption {
+    margin-top: 14px;
+    font-family: var(--editorial);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--cream-faint);
+    line-height: 1.5;
+  }
+
+  /* instagram */
+  .ig-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    border: 0.5px solid rgba(255, 220, 210, 0.25);
+    background: linear-gradient(135deg, rgba(242, 116, 77, 0.15) 0%, rgba(2, 8, 20, 0.6) 55%);
     font-family: var(--mono);
     font-size: 12px;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--cream-dim);
-    max-width: 640px;
+    color: var(--cream);
+    transition: all 0.3s ease;
+    margin-top: 8px;
   }
+  .ig-link:hover {
+    border-color: var(--coral);
+    background: linear-gradient(135deg, rgba(242, 116, 77, 0.3) 0%, rgba(8, 17, 30, 0.9) 60%);
+  }
+  .ig-link .ig-label {
+    font-family: var(--editorial);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--cream-dim);
+  }
+  .ig-link::after {
+    content: '↗';
+    color: var(--coral);
+    font-size: 14px;
+  }
+
   .back-link {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    margin-top: 48px;
+    margin-top: 64px;
     font-family: var(--mono);
     font-size: 11px;
     letter-spacing: 0.22em;
@@ -160,10 +228,14 @@
     flex-wrap: wrap;
     gap: 16px;
   }
+  .footer a { color: var(--cream-dim); transition: color 0.3s ease; }
+  .footer a:hover { color: var(--accent); }
 
   @media (max-width: 600px) {
     .topbar { flex-direction: column; gap: 16px; align-items: flex-start; }
     .top-nav { gap: 20px; }
+    .page { padding: 60px 24px 80px; }
+    .page-body { font-size: 17px; }
   }
 </style>
 </head>
@@ -184,8 +256,23 @@
   <div class="page-inner">
     <div class="eyebrow">About</div>
     <h1 class="page-title">About</h1>
-    <p class="page-body">Full-stack data scientist based in Santa Barbara. A decade translating ambiguous business questions into shipped systems — from AppFolio payments to climate-ML research at UC Berkeley. More bio coming soon.</p>
-    <div class="coming-soon">Coming soon — this page is being built.</div>
+
+    <p class="page-body">Amy is a single mom of two boys who loves exploring California. She has vast interests from completing multiple triathlons and an Ironman to trail running all across the Los Padres. Amy enjoys building out bespoke dahlia, rose, and native gardens, exploring with her kids, and deep diving into the world of wine.</p>
+
+    <div class="photo-wrap">
+      <div class="photo-frame">
+        <!-- Replace src with your image path, e.g. images/amy.jpg -->
+        <img src="images/about-photo.jpg" alt="Amy Steward" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="photo-placeholder" style="display:none;">Photo coming soon</div>
+      </div>
+    </div>
+
+    <a href="https://www.instagram.com/sb_chaoticblooms/" class="ig-link" target="_blank" rel="noopener">
+      <span class="ig-label">Follow the garden on</span>
+      Instagram @sb_chaoticblooms
+    </a>
+
+    <br>
     <a href="index.html" class="back-link">← Back to home</a>
   </div>
 </main>
