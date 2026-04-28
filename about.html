@@ -119,83 +119,34 @@
     line-height: 1.75;
     max-width: 680px;
   }
-  .page-body em {
-    font-style: italic;
-    color: var(--cream);
-  }
 
-  /* photo */
-  .photo-wrap {
-    margin: 64px 0 48px;
+  /* contact block */
+  .contact-block {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 0.5px solid rgba(255, 220, 210, 0.12);
     max-width: 680px;
   }
-  .photo-frame {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    background: rgba(2, 8, 20, 0.6);
-    border: 0.5px solid rgba(255, 220, 210, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-  }
-  .photo-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .photo-placeholder {
+  .contact-label {
     font-family: var(--mono);
     font-size: 11px;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--cream-faint);
+    color: var(--accent);
+    margin-bottom: 12px;
   }
-  .photo-caption {
-    margin-top: 14px;
+  .contact-email {
     font-family: var(--editorial);
-    font-style: italic;
     font-weight: 300;
-    font-size: 14px;
-    color: var(--cream-faint);
-    line-height: 1.5;
-  }
-
-  /* instagram */
-  .ig-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    padding: 16px 24px;
-    border: 0.5px solid rgba(255, 220, 210, 0.25);
-    background: linear-gradient(135deg, rgba(242, 116, 77, 0.15) 0%, rgba(2, 8, 20, 0.6) 55%);
-    font-family: var(--mono);
-    font-size: 12px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
+    font-size: 22px;
     color: var(--cream);
-    transition: all 0.3s ease;
-    margin-top: 8px;
+    border-bottom: 0.5px solid rgba(255, 220, 210, 0.3);
+    transition: color 0.3s ease, border-color 0.3s ease;
+    padding-bottom: 2px;
   }
-  .ig-link:hover {
-    border-color: var(--coral);
-    background: linear-gradient(135deg, rgba(242, 116, 77, 0.3) 0%, rgba(8, 17, 30, 0.9) 60%);
-  }
-  .ig-link .ig-label {
-    font-family: var(--editorial);
-    font-style: italic;
-    font-weight: 300;
-    font-size: 14px;
-    letter-spacing: 0;
-    text-transform: none;
-    color: var(--cream-dim);
-  }
-  .ig-link::after {
-    content: '↗';
+  .contact-email:hover {
     color: var(--coral);
-    font-size: 14px;
+    border-color: var(--coral);
   }
 
   .back-link {
@@ -236,6 +187,7 @@
     .top-nav { gap: 20px; }
     .page { padding: 60px 24px 80px; }
     .page-body { font-size: 17px; }
+    .contact-email { font-size: 18px; }
   }
 </style>
 </head>
@@ -257,22 +209,13 @@
     <div class="eyebrow">About</div>
     <h1 class="page-title">About</h1>
 
-    <p class="page-body">Amy is a single mom of two boys who loves exploring California. She has vast interests from completing multiple triathlons and an Ironman to trail running all across the Los Padres. Amy enjoys building out bespoke dahlia, rose, and native gardens, exploring with her kids, and deep diving into the world of wine.</p>
+    <p class="page-body">Amy lives in SoCal and enjoys the outdoors.</p>
 
-    <div class="photo-wrap">
-      <div class="photo-frame">
-        <!-- Replace src with your image path, e.g. images/amy.jpg -->
-        <img src="fam_pic.jpg" alt="Amy Steward" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="photo-placeholder" style="display:none;">Photo coming soon</div>
-      </div>
+    <div class="contact-block">
+      <div class="contact-label">Contact</div>
+      <a href="mailto:amy.steward0622@gmail.com" class="contact-email">amy.steward0622@gmail.com</a>
     </div>
 
-    <a href="https://www.instagram.com/sb_chaoticblooms/" class="ig-link" target="_blank" rel="noopener">
-      <span class="ig-label">Follow the garden on</span>
-      Instagram @sb_chaoticblooms
-    </a>
-
-    <br>
     <a href="index.html" class="back-link">← Back to home</a>
   </div>
 </main>
